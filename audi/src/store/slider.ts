@@ -1,5 +1,10 @@
 import { defineStore } from 'pinia'
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
+import img1 from '@/assets/images/slider/slide_1.jpg'
+import img2 from '@/assets/images/slider/slide_2.jpg'
+import img3 from '@/assets/images/slider/slide_3.jpg'
+import img4 from '@/assets/images/slider/slide_4.jpg'
+import img5 from '@/assets/images/slider/slide_5.jpg'
 
 interface ISliderItem {
   id: number
@@ -14,33 +19,31 @@ export const useSliderStore = defineStore('alerts', () => {
       id: 1,
       title: 'Performans',
       description: 'R8',
-      image: 'https://wallpapersmug.com/download/1920x1080/35a345/basement-audi-r8.jpg'
+      image: img1
     },
     {
       id: 2,
       title: 'Lüks',
       description: 'A8',
-      image:
-        'https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/cms/uploads/73dDzJyBTDan7vaUVNDS'
+      image: img2
     },
     {
       id: 3,
       title: 'Elektrik',
       description: 'Q4 e-tron',
-      image: 'https://images.alphacoders.com/114/1142391.jpg'
+      image: img3
     },
     {
       id: 4,
       title: 'SUV',
       description: 'Q7',
-      image: 'https://cimg2.ibsrv.net/ibimg/hgm/1920x1080-1/100/538/2017-audi-q7_100538458.jpg'
+      image: img4
     },
     {
       id: 5,
       title: 'Sportif',
       description: 'R8',
-      image:
-        'https://s1.1zoom.me/b5264/298/Audi_Coast_A3_Sportback_30_g-tron_2020_White_593144_1920x1080.jpg'
+      image: img5
     }
   ])
 

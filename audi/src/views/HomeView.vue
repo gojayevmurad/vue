@@ -39,7 +39,7 @@
             leaveFromClass=" scale-100 opacity-100"
             leaveToClass=" scale-95 opacity-80"
           >
-            <div v-if="activeIndex === index" class="relative bg-red-500 image-container">
+            <div v-show="activeIndex === index" class="relative image-container">
               <div
                 class="before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-[url('https://themezinho.net/brabus/images/bg-noise.gif')] before:opacity-10 grayscale-[0.5]"
               >
@@ -94,7 +94,7 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Mousewheel, Pagination, Autoplay } from 'swiper/modules'
-import { useSliderStore } from '../store/useSliderStore'
+import { useSliderStore } from '../store/slider'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -107,3 +107,4 @@ const slideChangeHandler = (swiper: any) => {
   activeIndex.value = swiper.activeIndex
 }
 </script>
+../store/slider
