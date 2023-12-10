@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- Root transition  -->
-    <div class="bg-black">
+    <div class="relative">
       <Swiper
         direction="vertical"
         :slidesPerView="1"
@@ -32,8 +32,8 @@
             name="fade"
             mode="out-in"
             :duration="1000"
-            enter-active-class="transition ease-in duration-1000"
-            leave-active-class="transition ease-out duration-1000"
+            enter-active-class="transition ease-in duration-1000 overflow-hidden"
+            leave-active-class="transition ease-out duration-1000 overflow-hidden"
             enterFromClass=" scale-95 opacity-80"
             enterToClass=" scale-100 opacity-100"
             leaveFromClass=" scale-100 opacity-100"
@@ -45,12 +45,12 @@
               >
                 <img :src="slide.image" class="w-full h-full" />
               </div>
-              <div class="absolute inset-0 flex flex-col justify-center items-start pl-9">
-                <h1 class="text-9xl font-bold text-red-600">
+              <div class="absolute inset-0 flex flex-col justify-center items-start pl-20">
+                <h1 class="text-9xl font-bold text-[#e8293b]">
                   {{ slide.title }}
                 </h1>
                 <p
-                  class="text-[95px] font-bold text-[rgba(255,255,255,0.17)] -mt-4"
+                  class="text-9xl font-bold text-transparent -mt-14 ml-4"
                   style="-webkit-text-stroke-color: #fff; -webkit-text-stroke-width: 1px"
                 >
                   {{ slide.description }}
@@ -60,6 +60,33 @@
           </Transition>
         </SwiperSlide>
       </Swiper>
+
+      <div
+        class="absolute top-1/2 z-40 transform -translate-x-1/2 -translate-y-1/2 font-fjalla flex gap-4 -rotate-90 ml-9 text-white"
+      >
+        <RouterLink
+          to="/about"
+          class="border-b border-transparent hover:border-b-white transition-all"
+        >
+          FACEBOOK
+        </RouterLink>
+        <RouterLink
+          to="/about"
+          class="border-b border-transparent hover:border-b-white transition-all"
+          >GITHUB</RouterLink
+        >
+        <RouterLink
+          to="/about"
+          class="border-b border-transparent hover:border-b-white transition-all"
+          >YOUTUBE</RouterLink
+        >
+      </div>
+      <div
+        class="absolute bottom-16 z-40 transform -translate-x-1/2 -translate-y-1/2 font-fjalla flex justify-center items-center gap-4 -rotate-90 ml-9 text-white"
+      >
+        <div class="h-1 w-16 bg-white"></div>
+        <p class="border-b border-transparent transition-all">SCROLL DOWN</p>
+      </div>
     </div>
   </main>
 </template>
