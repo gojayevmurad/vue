@@ -1,20 +1,18 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import testDriveCar1 from '@/assets/images/test-drive/audi_a6.png'
-import testDriveCar2 from '@/assets/images/test-drive/audi_q8.png'
+import testDriveCar1 from '@/assets/images/test-drive/audi_a6_new.png'
+import testDriveCar2 from '@/assets/images/test-drive/audi_q8_new.png'
 
 export const useTestDriveStore = defineStore('alerts', () => {
   const availableCars = ref([
     {
       id: 1,
-      title: 'Audi A6',
-      description: 'Audi A6 40 TDI 204 HP S tronic',
+      title: 'Audi A60 40 Sport',
       image: testDriveCar1
     },
     {
       id: 2,
       title: 'Audi Q8',
-      description: 'Audi Q8 50 TDI 286 HP tiptronic',
       image: testDriveCar2
     }
   ])

@@ -1,17 +1,17 @@
 <template>
   <header
     :style="{ 'background-color': scrolled ? '#fff' : 'transparent' }"
-    class="transition-all duration-700 fixed top-0 left-0 w-screen z-50 h-10 grid grid-cols-3 items-center px-9"
+    class="transition-all duration-700 fixed top-0 left-0 w-screen z-50 h-14 grid grid-cols-3 items-center px-9"
   >
     <div>
-      <RouterLink to="/direction">
+      <RouterLink to="/test-drive">
         <p
           :class="[
-            'text-white border-b border-transparent hover:border-b-white text-xl font-fjalla',
+            'text-white border-b border-transparent hover:border-b-white text-xl font-fjalla w-max',
             scrolled && 'text-black hover:border-b-black'
           ]"
         >
-          Direction
+          Test Sürüşü
         </p>
       </RouterLink>
     </div>
@@ -64,9 +64,5 @@ const routes = [
     name: 'Haqqımızda',
     path: '/about'
   },
-  {
-    name: 'Test Sürüşü',
-    path: '/test-drive'
-  }
 ]
 </script>

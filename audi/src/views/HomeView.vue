@@ -29,15 +29,15 @@
           class="w-full h-full overflow-hidden"
         >
           <Transition
-            name="fade"
+            name="home-main"
             mode="out-in"
             :duration="1000"
             enter-active-class="transition ease-in duration-1000 overflow-hidden"
             leave-active-class="transition ease-out duration-1000 overflow-hidden"
-            enterFromClass=" scale-95 opacity-80"
-            enterToClass=" scale-100 opacity-100"
-            leaveFromClass=" scale-100 opacity-100"
-            leaveToClass=" scale-95 opacity-80"
+            enterFromClass="scale-95 opacity-80"
+            enterToClass="scale-100 opacity-100"
+            leaveFromClass="scale-100 opacity-100"
+            leaveToClass="scale-95 opacity-80"
           >
             <div v-show="activeIndex === index" class="relative image-container">
               <div

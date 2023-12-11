@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
+import TestDriveView from '../views/TestDriveView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 import NProgress from 'nprogress'
 
 const router = createRouter({
@@ -13,17 +16,17 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
+      component: AboutView
     },
     {
       path: '/test-drive',
       name: 'test-drive',
-      component: () => import('../views/TestDriveView.vue')
+      component: TestDriveView
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
-      component: () => import('../views/NotFoundView.vue')
+      component: NotFoundView
     }
   ]
 })
