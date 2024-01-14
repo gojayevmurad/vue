@@ -8,14 +8,13 @@ import {
 
 import DashboardViewVue from "../Views/Dashboard/DashboardView.vue";
 import NotFoundViewVue from "../Views/NotFound/NotFoundView.vue";
-import { useAuthStore } from "../store/auth";
 
 const checkAuth = (
   _to: RouteLocationNormalized,
   _from: RouteLocationNormalized,
   next: NavigationGuardNext
 ) => {
-  const isAuth = useAuthStore().isAuth;
+  const isAuth = true;
 
   if (isAuth) next();
   else next({ name: "not-found" });
