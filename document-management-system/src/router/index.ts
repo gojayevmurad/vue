@@ -39,13 +39,10 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to, _from, next) => {
-  console.log(to);
-  next();
-});
+// router.beforeEach((to, _from, next) => {
+//   next();
+// });
 
-router.afterEach((to, _from) => {
-  console.log(to);
-});
+// router.afterEach((to, _from) => {});
 
 export default router;

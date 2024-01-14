@@ -113,7 +113,7 @@ const toggleFullscreen = () => {
                       selectedLang = lang.code;
                       isLanguageDropdownOpen = false;
                     "
-                    class="flex justify-start items-center gap-2 w-full bg-white px-1 py-2"
+                    class="flex justify-start items-center gap-2 w-full bg-white px-3 py-2 hover:bg-[#f3f3f9]"
                   >
                     <img :src="lang.flag" :alt="`flag-${lang}`" class="h-5" />
                     <p>{{ lang.name }}</p>

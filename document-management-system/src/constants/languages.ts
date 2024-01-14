@@ -13,7 +13,7 @@ const languages: ILang[] = [
   {
     code: "az",
     flag: azFlag,
-    name: "Azərbaycan",
+    name: "Azərbaycanca",
   },
   {
     code: "tr",
