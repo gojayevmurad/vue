@@ -4,19 +4,17 @@
  * @returns Object containing size in KB, MB, GB, TB
  */
 function convertFileSize(sizeInKB: number) {
-  const KB_TO_MB = 1 / 1024;
-  const MB_TO_GB = 1 / 1024;
-  const GB_TO_TB = 1 / 1024;
+  const CONVERT_L = 1 / 1024;
 
-  const sizeInMB = sizeInKB * KB_TO_MB;
-  const sizeInGB = sizeInMB * MB_TO_GB;
-  const sizeInTB = sizeInGB * GB_TO_TB;
+  const sizeInMB = sizeInKB * CONVERT_L;
+  const sizeInGB = sizeInMB * CONVERT_L;
+  const sizeInTB = sizeInGB * CONVERT_L;
 
   return {
-    kb: sizeInKB.toFixed(2) + " KB",
-    mb: sizeInMB.toFixed(2) + " MB",
-    gb: sizeInGB.toFixed(2) + " GB",
-    tb: sizeInTB.toFixed(2) + " TB",
+    kb: +sizeInKB.toFixed(2),
+    mb: +sizeInMB.toFixed(2),
+    gb: +sizeInGB.toFixed(2),
+    tb: +sizeInTB.toFixed(2),
   };
 }
 

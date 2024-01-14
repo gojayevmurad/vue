@@ -11,7 +11,7 @@
       <div :class="gridColStyles" class="flex flex-col gap-2">
         <!-- main content header -->
         <div class="flex justify-between items-center mb-4">
-          <h2 class="text-lg">My Files</h2>
+          <h2 class="text-base">My Files</h2>
           <div class="flex justify-center items-center gap-3">
             <button>
               <img :src="moreIcon" alt="more" />
